@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para mi amor Marciely ❤️</title>
+  <link href="./src/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+
+<body class="bg-love-bg overflow-x-hidden font-lora text-gray-800 selection:bg-love-pink selection:text-white">
+
+  <!-- 3D Scene Background -->
+  <canvas id="bg" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-auto"></canvas>
+
+  <!-- Overlay UI (Initially Hidden) -->
+  <main id="content" class="relative z-10 w-full hidden opacity-0 transition-opacity duration-1000">
+
+    <!-- Letter Content Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-8">
+      <!-- Letter Card Silhouette -->
+      <div
+        class="bg-[#fffdf7] p-6 md:p-12 w-full max-w-lg rounded-[2rem] shadow-2xl border border-stone-200 transform transition-transform relative overflow-hidden">
+
+        <!-- Decorative Stamp/Header -->
+        <div class="absolute top-4 right-6 opacity-80 rotate-12">
+          <i class="ti ti-mail-heart text-4xl text-love-red"></i>
+        </div>
+
+        <h1 class="font-dancing text-5xl md:text-6xl text-deep-red mb-8 text-center drop-shadow-sm leading-tight">Para
+          mi amor</h1>
+
+        <div class="prose prose-pink text-lg md:text-xl text-center leading-relaxed font-lora italic text-stone-700">
+          <p class="mb-6">
+            "Te amo sin saber cómo, ni cuándo, ni de dónde,<br>
+            te amo directamente sin problemas ni orgullo:<br>
+            así te amo porque no sé amar de otra manera."
+          </p>
+          <p class="text-right text-sm text-stone-500 not-italic mt-2 font-outfit uppercase tracking-widest">
+            ― Pablo Neruda (Soneto XVII)
+          </p>
+
+          <hr class="my-6 border-red-200 w-1/2 mx-auto">
+
+          <p>
+            Mi querida Marciely,<br>
+            Cada día a tu lado es un verso nuevo en mi vida.<br>
+            Eres mi inspiración y mi refugio.
+          </p>
+
+          <div class="mt-8 animate-bounce text-love-red flex justify-center">
+            <span class="font-outfit text-sm uppercase tracking-wide mr-2 self-center">Ver nuestros recuerdos</span>
+            <i class="ti ti-arrow-down text-2xl"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photos Section (No top padding as requested) -->
+    <section class="min-h-screen flex flex-col items-center justify-center pb-10 pt-0">
+      <h2 class="font-dancing text-4xl md:text-5xl text-love-red mb-8 text-center px-4">Tú y Yo</h2>
+
+      <div class="flex flex-col md:flex-row gap-8 items-center justify-center px-6 w-full max-w-5xl">
+        <!-- Photo 1 -->
+        <div
+          class="bg-white p-3 shadow-lg rotate-[-3deg] hover:rotate-0 transition-transform duration-500 rounded-lg w-full max-w-xs aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800&q=80" alt="Juntos"
+            class="w-full h-full object-cover rounded pointer-events-none">
+          <p class="font-dancing text-center text-xl mt-2 text-deep-red">Momentos únicos</p>
+        </div>
+
+        <!-- Photo 2 -->
+        <div
+          class="bg-white p-3 shadow-lg rotate-[2deg] hover:rotate-0 transition-transform duration-500 rounded-lg w-full max-w-xs aspect-[3/4] z-10 md:scale-110">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80" alt="Tu sonrisa"
+            class="w-full h-full object-cover rounded pointer-events-none">
+          <p class="font-dancing text-center text-xl mt-2 text-deep-red">Tu sonrisa</p>
+        </div>
+
+        <!-- Photo 3 -->
+        <div
+          class="bg-white p-3 shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-500 rounded-lg w-full max-w-xs aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1621112904887-419379ce6824?w=800&q=80" alt="Amor"
+            class="w-full h-full object-cover rounded pointer-events-none">
+          <p class="font-dancing text-center text-xl mt-2 text-deep-red">Siempre tú</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proposal Section (Bigger and better) -->
+    <section
+      class="h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-t from-red-50/50 to-transparent">
+
+      <div class="absolute inset-0 z-0 opacity-20 pointer-events-none flex justify-center items-center">
+        <i class="ti ti-heart-filled text-[20rem] text-love-pink animate-pulse"></i>
+      </div>
+
+      <div class="z-10 text-center px-4 w-full max-w-3xl transform transition-all duration-700 hover:scale-105">
+        <p class="font-lora italic text-xl md:text-2xl text-stone-600 mb-6">Tengo una pregunta importante...</p>
+        <h2 class="font-dancing text-6xl md:text-8xl text-love-red mb-12 drop-shadow-md leading-tight">
+          ¿Quieres ser mi<br>San Valentín?
+        </h2>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
+          <button id="btn-yes"
+            class="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-love-red to-deep-red text-white text-2xl md:text-3xl font-outfit font-bold rounded-full shadow-2xl hover:shadow-love-red/50 hover:-translate-y-1 transition-all transform flex items-center justify-center gap-3 active:scale-95 group">
+            <i class="ti ti-heart-handshake group-hover:animate-bounce"></i> ¡Sí, acepto!
+          </button>
+          <button id="btn-course"
+            class="w-full sm:w-auto px-10 py-5 bg-white text-love-red border-2 border-love-red text-2xl md:text-3xl font-outfit font-bold rounded-full shadow-xl hover:bg-red-50 hover:-translate-y-1 transition-all transform flex items-center justify-center gap-3 active:scale-95">
+            <i class="ti ti-check"></i> ¡Claro que sí!
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-6 text-center text-love-pink/80 font-dancing text-xl pb-20">
+      Hecho con todo mi amor para ti. ❤️
+    </footer>
+
+  </main>
+
+  <!-- Initial Loading / Prompt overlay for 3D interaction -->
+  <div id="start-prompt" class="fixed inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+    <!-- Pulsing prompt box -->
+    <div
+      class="bg-white/90 backdrop-blur px-8 py-6 rounded-[2rem] shadow-2xl animate-float pointer-events-auto cursor-pointer transition-opacity duration-500 border-2 border-love-pink text-center max-w-xs mx-4"
+      id="prompt-box">
+      <i class="ti ti-mail-opened text-5xl text-love-red mb-2 animate-bounce"></i>
+      <p class="font-dancing text-3xl text-deep-red">¡Tengo una sorpresa!</p>
+      <p class="font-outfit text-sm text-stone-500 mt-2">(Toca el sobre para abrir)</p>
+    </div>
+  </div>
+
+  <!-- Celebration Logic -->
+  <div id="celebration" class="fixed inset-0 pointer-events-none z-50 hidden"></div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>
